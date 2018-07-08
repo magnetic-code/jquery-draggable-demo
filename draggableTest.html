@@ -1,0 +1,98 @@
+<html>
+    <head>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+
+        <title>JQuery draggable demo!</title>
+
+        <style>
+
+        	.close
+        	{
+        		width: 20px;
+        		height: 20px;
+        		border-radius: 50%;
+        		position:absolute;
+        		top:5;
+        		right:5;
+        		background-color: red;
+        		border-color: red;
+        	}
+        	
+            .sqr
+            {
+                width: 200px;
+                height: 250px;
+                margin: 5px;
+                border-radius: 5%;
+            }
+
+            .bluegr
+            {
+                background: linear-gradient(to bottom right, #4286f4, #4ebcfc);
+            }
+
+            .title
+            {
+            	top:5;
+            	left:5;
+            	margin: 10px;
+            }
+            .font1
+            {
+            	font-family: 'Comfortaa', cursive;
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+   		 <div id="window" class="sqr bluegr">
+
+   		 	<button id="clb" onclick="close();" class="close"></button>
+
+   		 	<h2 class="title font1">Welcome</h2>
+
+   		 	<hr>
+
+   		 	<p class="font1">
+   		 	Hello, welcome to this test! This is built with JQuery, and JQuery UI!
+
+   		 	<br><br>
+
+   		 	JQuery UI is for the draggable window.
+
+   		 	<br><br>
+
+   		 	JQuery is for fadeOut.
+
+   		 	<br><hr>
+			<a href="https://github.com/magnetic-code">Source Code</a>
+   		 	</p>
+  		 </div>
+
+    <script>
+            $( function ()
+            {
+                $( "#window" ).draggable();
+            });
+
+           	$( "#clb" ).click(function()
+           	{
+           	$( "#window" ).fadeOut( "slow" , "easeOutCubic" , function () {
+           		$( "#window" ).remove();
+           	}
+
+           	)
+
+           	});
+    </script> 
+
+    </body>
+
+</html>
