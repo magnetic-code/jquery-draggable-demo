@@ -17,8 +17,11 @@
         		position:absolute;
         		top:5;
         		right:5;
-        		background-color: red;
         		border-color: red;
+        		padding: 0;
+				border: none;
+				background: url("https://png.icons8.com/color/260/cancel.png");
+				background-size: 20px 20px;
         	}
         	
             .sqr
@@ -72,7 +75,7 @@
    		 	JQuery is for fadeOut.
 
    		 	<br><hr>
-			<a href="https://github.com/magnetic-code">Source Code</a>
+			<a href="https://github.com/magnetic-code/jquery-draggable-demo">Source Code</a>
    		 	</p>
   		 </div>
 
@@ -86,6 +89,7 @@
            	{
            	$( "#window" ).fadeOut( "slow" , "easeOutCubic" , function () {
            		$( "#window" ).remove();
+           		window.location.href = "http://blapplappl.xyz/jqueryTests.html";
            	}
 
            	)
